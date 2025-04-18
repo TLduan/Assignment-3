@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Customer</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Delete Customer Record</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="data.html">Data Visualization</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <p>This page simulates the deletion of a customer record. In the final version, a confirmation prompt would trigger before removing the record from the database.</p>
+
+      <form>
+        <label for="custId">Customer ID to Delete:</label><br/>
+        <input type="text" id="custId" name="custId" placeholder="Enter Customer ID"><br/><br/>
+
+        <button type="button" style="background-color: #dc3545;">Delete</button>
+      </form>
+
+      <p style="color: #dc3545; margin-top: 20px;">
+        ⚠️ Deleting a customer will remove all associated order records. This action is irreversible.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 E-Commerce Prototype Team</p>
+  </footer>
+</body>
+</html>
