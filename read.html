@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Read Customer Data</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Customers | CommerceCore</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>View Customers</h1>
+    <h1><i class="fas fa-users"></i> View Customers</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="data.html">Data Visualization</a>
-      <a href="about.html">About Us</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="data.html"><i class="fas fa-chart-bar"></i> Data Visualization</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
     </nav>
   </header>
 
   <main>
     <section>
-      <p>This page simulates how a user would view customer records. In the final application, this would be dynamically populated via an API call to the database.</p>
+      <p>This page simulates how a user would view customer records in a real e-commerce system.</p>
 
-      <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin-top: 20px;">
+      <table class="customer-table">
         <thead>
           <tr>
-            <th>Customer ID</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Region</th>
-            <th>Join Date</th>
+            <th><i class="fas fa-id-card"></i> Customer ID</th>
+            <th><i class="fas fa-user"></i> Full Name</th>
+            <th><i class="fas fa-envelope"></i> Email</th>
+	    <th><i class="fas fa-envelope"></i> Phone Number</th>
+            <th><i class="fas fa-envelope"></i> Address</th>
+            <th><i class="fas fa-globe"></i> Region</th>
+            <th><i class="fas fa-calendar"></i> Join Date</th>
+	    <th><i class="fas fa-cog"></i> Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -35,25 +39,45 @@
             <td>1001</td>
             <td>Jane Doe</td>
             <td>jane@example.com</td>
+	    <td>813-845-1578</td>
+	    <td>12301 USF Elm Drive, Tampa, FL 33620</td>
             <td>North America</td>
             <td>2025-03-01</td>
+            <td>
+              <a href="update.html" class="btn-action"><i class="fas fa-edit"></i></a>
+              <a href="delete.html" class="btn-action btn-delete"><i class="fas fa-trash"></i></a>
+            </td>
           </tr>
           <tr>
             <td>1002</td>
             <td>John Smith</td>
             <td>john@example.com</td>
+            <td>813-845-1718</td>
+	    <td>12499 USF Bull Run Drive, Tampa, FL 33617</td>
             <td>Europe</td>
             <td>2025-03-04</td>
+            <td>
+              <a href="update.html" class="btn-action"><i class="fas fa-edit"></i></a>
+              <a href="delete.html" class="btn-action btn-delete"><i class="fas fa-trash"></i></a>
+            </td>
           </tr>
           <tr>
             <td>1003</td>
             <td>Emily Zhang</td>
             <td>emily@example.com</td>
+	    <td>813-845-1718</td>
+	    <td>12303 USF Maple Dr, Tampa, FL 33620</td>
             <td>Asia</td>
             <td>2025-03-10</td>
+            <td>
+              <a href="update.html" class="btn-action"><i class="fas fa-edit"></i></a>
+              <a href="delete.html" class="btn-action btn-delete"><i class="fas fa-trash"></i></a>
+            </td>
           </tr>
         </tbody>
       </table>
+      
+
     </section>
   </main>
 

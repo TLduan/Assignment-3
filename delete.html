@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Delete Customer</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Customer | CommerceCore</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Delete Customer Record</h1>
+    <h1><i class="fas fa-user-times"></i> Delete Customer</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="data.html">Data Visualization</a>
-      <a href="about.html">About Us</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="data.html"><i class="fas fa-chart-bar"></i> Data Visualization</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <p>This page simulates the deletion of a customer record. In the final version, a confirmation prompt would trigger before removing the record from the database.</p>
-
+    <section class="confirmation">
+      
       <form>
-        <label for="custId">Customer ID to Delete:</label><br/>
-        <input type="text" id="custId" name="custId" placeholder="Enter Customer ID"><br/><br/>
+        <div class="form-group">
+          <label for="confirmId"><i class="fas fa-key"></i> Customer ID to Delete:</label>
+          <input type="text" id="confirmId" name="confirmId" placeholder="Enter customer ID " required>
+        </div>
 
-        <button type="button" style="background-color: #dc3545;">Delete</button>
+ 	<div class="warning-message">
+          <i class="fas  fa-exclamation-triangle"></i>
+        <h2>Waring</h2>
+          <p style="color: #dc3545; margin-top: 20px;">
+        Deleting a customer will remove all associated order records. This action is irreversible.</p>
+      </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-delete">
+            <i class="fas fa-trash"></i> Delete
+          </button>
+          <a href="read.html" class="btn-cancel">
+            <i class="fas fa-times"></i> Cancel
+          </a>
+        </div>
       </form>
-
-      <p style="color: #dc3545; margin-top: 20px;">
-        ⚠️ Deleting a customer will remove all associated order records. This action is irreversible.
-      </p>
     </section>
   </main>
 
