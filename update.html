@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Update Customer Info</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Customer | CommerceCore</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Update Existing Customer</h1>
+    <h1><i class="fas fa-user-edit"></i> Update Customer</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="data.html">Data Visualization</a>
-      <a href="about.html">About Us</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="data.html"><i class="fas fa-chart-bar"></i> Data Visualization</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
     </nav>
   </header>
 
   <main>
-    <section>
-      <p>This page simulates editing an existing customer record. In the final project, this form would be populated with real customer data and connected to the backend for live updates.</p>
+    <section class="form-container">
+      <p>This page simulates editing an existing customer record in a real e-commerce system.</p>
 
       <form>
-        <label for="custId">Customer ID:</label><br/>
-        <input type="text" id="custId" name="custId" value="1002" disabled /><br/><br/>
+        <div class="form-group">
+          <label for="custId"><i class="fas fa-id-card"></i> Customer ID:</label>
+          <input type="text" id="custId" name="custId" value="1002" disabled>
+        </div>
 
-        <label for="name">Full Name:</label><br/>
-        <input type="text" id="name" name="name" value="John Smith" /><br/><br/>
+        <div class="form-group">
+          <label for="name"><i class="fas fa-user"></i> Full Name:</label>
+          <input type="text" id="name" name="name" value="John Smith" required>
+        </div>
 
-        <label for="email">Email:</label><br/>
-        <input type="email" id="email" name="email" value="john@example.com" /><br/><br/>
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+          <input type="email" id="email" name="email" value="john@example.com" required>
+        </div>
 
-        <label for="region">Region:</label><br/>
-        <select id="region" name="region">
-          <option selected>Europe</option>
-          <option>North America</option>
-          <option>Asia</option>
-          <option>South America</option>
-        </select><br/><br/>
+        <div class="form-group">
+          <label for="phone"><i class="fas fa-phone"></i> Phone Number:</label>
+          <input type="tel" id="phone" name="phone" value="+1 555-123-4567">
+        </div>
 
-        <button type="button">Update</button>
+        <div class="form-group">
+          <label for="address"><i class="fas fa-map-marker-alt"></i> Address:</label>
+          <textarea id="address" name="address">123 Main St, Anytown, USA</textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="region"><i class="fas fa-globe"></i> Region:</label>
+          <select id="region" name="region" required>
+            <option>North America</option>
+            <option selected>Europe</option>
+            <option>Asia</option>
+            <option>South America</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-update">
+            <i class="fas fa-save"></i> Update Customer
+          </button>
+          <a href="read.html" class="btn-cancel">
+            <i class="fas fa-times"></i> Cancel
+          </a>
+        </div>
       </form>
     </section>
   </main>

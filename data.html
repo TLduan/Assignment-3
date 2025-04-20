@@ -1,34 +1,36 @@
-<!-- data.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Data Visualization</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Visualization | CommerceCore</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
-    <h1>Data Visualization Dashboard</h1>
+    <h1><i class="fas fa-chart-bar"></i> Data Visualization</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="data.html">Data Visualization</a>
-      <a href="about.html">About Us</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="data.html" class="active"><i class="fas fa-chart-bar"></i> Data Visualization</a>
+      <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
     </nav>
   </header>
 
   <main>
     <section>
-      <h2>Sales by Product Category</h2>
+      <h2><i class="fas fa-shopping-bag"></i> Sales by Product Category</h2>
       <canvas id="barChart" width="400" height="200"></canvas>
     </section>
+    
     <section>
-      <h2>Customer Distribution by Region</h2>
+      <h2><i class="fas fa-users"></i> Customer Distribution by Region</h2>
       <canvas id="pieChart" width="400" height="200"></canvas>
     </section>
+    
     <section>
-      <h2>Monthly Revenue Growth</h2>
+      <h2><i class="fas fa-line-chart"></i> Monthly Revenue Growth</h2>
       <canvas id="lineChart" width="400" height="200"></canvas>
     </section>
   </main>
