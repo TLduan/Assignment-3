@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Read Customer Data</title>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Customers | CommerceCore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style-overrides.css">
 </head>
 <body>
   <header>
-    <h1>View Customers</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="data.html">Data Visualization</a>
-      <a href="about.html">About Us</a>
-    </nav>
-  </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+      <div class="container">
+        <a class="navbar-brand fs-2" href="index.html"><i class="fas fa-store me-2"></i> CommerceCore: A Smart E-Commerce System Prototype</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link rounded" href="index.html"><i class="fas fa-home me-2"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded" href="data.html"><i class="fas fa-chart-bar me-2"></i> Data Visualization</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded" href="about.html"><i class="fas fa-info-circle me-2"></i> About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section>
-      <p>This page simulates how a user would view customer records. In the final application, this would be dynamically populated via an API call to the database.</p>
+<main class="container my-4 flex-grow-1">
+  <section class="mb-4">
+    <h2 class="text-primary mb-3 fs-4"><i class="fas fa-users me-2"></i> View Customers</h2>
+    <p class="mb-3">This page simulates how a user would view customer records in a real e-commerce system.</p>
 
-      <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; margin-top: 20px;">
-        <thead>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
           <tr>
-            <th>Customer ID</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Region</th>
-            <th>Join Date</th>
+            <th scope="col"><i class="fas fa-id-card me-2"></i> Customer ID</th>
+            <th scope="col"><i class="fas fa-user me-2"></i> Full Name</th>
+            <th scope="col"><i class="fas fa-envelope me-2"></i> Email</th>
+            <th scope="col"><i class="fas fa-phone me-2"></i> Phone Number</th>
+            <th scope="col"><i class="fas fa-map-marker-alt me-2"></i> Address</th>
+            <th scope="col"><i class="fas fa-globe me-2"></i> Region</th>
+            <th scope="col"><i class="fas fa-calendar me-2"></i> Join Date</th>
+            <th scope="col"><i class="fas fa-cog me-2"></i> Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -35,30 +58,51 @@
             <td>1001</td>
             <td>Jane Doe</td>
             <td>jane@example.com</td>
+            <td>813-845-1578</td>
+            <td>12301 USF Elm Drive, Tampa, FL 33620</td>
             <td>North America</td>
             <td>2025-03-01</td>
+            <td>
+              <a href="update.html" class="btn btn-action btn-primary btn-sm me-1" title="Edit"><i class="fas fa-edit"></i></a>
+              <a href="delete.html" class="btn btn-action btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
+            </td>
           </tr>
           <tr>
             <td>1002</td>
             <td>John Smith</td>
             <td>john@example.com</td>
+            <td>813-845-1718</td>
+            <td>12499 USF Bull Run Drive, Tampa, FL 33617</td>
             <td>Europe</td>
             <td>2025-03-04</td>
+            <td>
+              <a href="update.html" class="btn btn-action btn-primary btn-sm me-1" title="Edit"><i class="fas fa-edit"></i></a>
+              <a href="delete.html" class="btn btn-action btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
+            </td>
           </tr>
           <tr>
             <td>1003</td>
             <td>Emily Zhang</td>
             <td>emily@example.com</td>
+            <td>813-845-1718</td>
+            <td>12303 USF Maple Dr, Tampa, FL 33620</td>
             <td>Asia</td>
             <td>2025-03-10</td>
+            <td>
+              <a href="update.html" class="btn btn-action btn-primary btn-sm me-1" title="Edit"><i class="fas fa-edit"></i></a>
+              <a href="delete.html" class="btn btn-action btn-danger btn-sm" title="Delete"><i class="fas fa-trash"></i></a>
+            </td>
           </tr>
         </tbody>
       </table>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; 2025 E-Commerce Prototype Team</p>
-  </footer>
+<footer class="bg-light py-3 mt-4">
+  <p class="text-center">&copy; 2025 E-Commerce Prototype Team</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
