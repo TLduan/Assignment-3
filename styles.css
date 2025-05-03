@@ -92,6 +92,43 @@ h2 i {
   margin-right: 10px;
 }
 
+/* ========== Footer Style ========== */
+footer {
+  background-color: var(--primary); /* Match header background */
+  color: var(--white);              /* Match header text color */
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle top shadow */
+  margin-top: 2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
 /* ========== Card Style ========== */
 .card {
   background: var(--white);
